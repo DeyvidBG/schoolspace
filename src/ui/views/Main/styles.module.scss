@@ -1,0 +1,23 @@
+.section {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section:nth-child(1) {
+  background-image: url("../../assets/blobBackground.svg");
+}
+
+.section:nth-child(2) {
+  background-image: url("../../assets/waveBackground.svg");
+}
+
+.section:nth-child(3) {
+  height: 50vh;
+  background-color: var(--darkBlue);
+}

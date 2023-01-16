@@ -1,0 +1,180 @@
+.button {
+  padding: 1rem 1.33rem;
+  background: none;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  border: 0.2rem solid transparent;
+  text-transform: uppercase;
+}
+
+.button:disabled {
+  color: var(--darkGrey);
+  cursor: default;
+  border: 0.4rem solid transparent;
+}
+
+.button:disabled .text--primary {
+  color: var(--green);
+}
+
+.button:disabled .text--primary:hover {
+  background: var(--lightGreen);
+  color: var(--darkGreen);
+}
+
+.text--primary {
+  color: var(--green);
+}
+
+.text--primary:not([disabled]):hover {
+  background: var(--lightGreen);
+  color: var(--darkGreen);
+}
+
+.text--secondary {
+  color: var(--blue);
+}
+
+.text--secondary:not([disabled]):hover {
+  background: var(--lightBlue);
+  color: var(--darkBlue);
+}
+
+.text--info {
+  color: var(--yellow);
+}
+
+.text--info:not([disabled]):hover {
+  background: var(--lightYellow);
+  color: var(--darkYellow);
+}
+
+.text--error {
+  color: var(--red);
+}
+
+.text--error:not([disabled]):hover {
+  background: var(--lightRed);
+  color: var(--darkRed);
+}
+
+.contained {
+  color: var(--white);
+}
+
+.contained--primary {
+  background-color: var(--green);
+}
+
+.contained--primary:hover {
+  background-color: var(--darkGreen);
+}
+
+.contained--secondary {
+  background-color: var(--blue);
+}
+
+.contained--secondary:not([disabled]):hover {
+  background-color: var(--darkBlue);
+}
+
+.contained--info {
+  background-color: var(--yellow);
+}
+
+.contained--info:not([disabled]):hover {
+  background-color: var(--darkYellow);
+}
+
+.contained--error {
+  background-color: var(--red);
+}
+
+.contained--error:not([disabled]):hover {
+  background-color: var(--darkRed);
+}
+
+.outlined:hover {
+  color: var(--white);
+}
+
+.outlined--primary {
+  border: 0.2rem solid var(--green);
+  color: var(--green);
+}
+
+.outlined--primary:not([disabled]):hover {
+  background-color: var(--green);
+}
+
+.outlined--secondary {
+  border: 0.2rem solid var(--blue);
+  color: var(--blue);
+}
+
+.outlined--secondary:not([disabled]):hover {
+  background-color: var(--blue);
+}
+
+.outlined--info {
+  border: 0.2rem solid var(--yellow);
+  color: var(--yellow);
+}
+
+.outlined--info:not([disabled]):hover {
+  background-color: var(--yellow);
+}
+
+.outlined--error {
+  border: 0.2rem solid var(--red);
+  color: var(--red);
+}
+
+.outlined--error:not([disabled]):hover {
+  background-color: var(--red);
+}
+
+.menu {
+  color: black;
+  border-radius: 0rem;
+}
+
+.menu--primary {
+  border-left: 0.4rem solid var(--green);
+}
+
+.menu--primary:not([disabled]):hover {
+  background-color: var(--lightGreen);
+  color: var(--darkGreen);
+}
+
+.menu--secondary {
+  border-left: 0.4rem solid var(--blue);
+}
+
+.menu--secondary:not([disabled]):hover {
+  background-color: var(--lightBlue);
+  color: var(--darkBlue);
+}
+
+.menu--info {
+  border-left: 0.4rem solid var(--yellow);
+}
+
+.menu--info:not([disabled]):hover {
+  background-color: var(--lightYellow);
+  color: var(--darkYellow);
+}
+
+.menu--error {
+  border-left: 0.4rem solid var(--red);
+}
+
+.menu--error:not([disabled]):hover {
+  background-color: var(--lightRed);
+  color: var(--darkRed);
+}
+/*# sourceMappingURL=styles.module.css.map */

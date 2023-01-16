@@ -1,0 +1,17 @@
+.signUpSchool {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border-radius: 1rem;
+  width: 70%;
+  min-height: 80%;
+  background-color: var(--grey);
+  padding: 1rem 1.33rem;
+}
+
+@media (max-width: 768px) {
+  .signUpSchool {
+    width: 90%;
+  }
+}

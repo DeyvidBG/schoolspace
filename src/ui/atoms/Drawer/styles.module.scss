@@ -1,0 +1,15 @@
+.drawer {
+  width: 20%;
+  height: 100vh;
+  background-color: var(--white);
+  position: relative;
+  display: flex;
+  z-index: 9999;
+}
+
+@media (max-width: 768px) {
+  .drawer {
+    position: fixed;
+    width: 100%;
+  }
+}

@@ -1,0 +1,91 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0.5rem;
+}
+
+.variant-h1 {
+  font-size: 6rem;
+  font-weight: 500;
+}
+
+.variant-h2 {
+  font-size: 3.75rem;
+  font-weight: 500;
+}
+
+.variant-h3 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.variant-h4 {
+  font-size: 2.125rem;
+  font-weight: 500;
+}
+
+.variant-h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.variant-h6 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.variant-subheading1 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.variant-subheading2 {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.variant-body1 {
+  font-size: 1rem;
+}
+
+.variant-body2 {
+  font-size: 0.875rem;
+}
+
+.color-primary {
+  color: var(--darkGreen);
+}
+
+.color-secondary {
+  color: var(--blue);
+}
+
+.color-info {
+  color: var(--yellow);
+}
+
+.color-error {
+  color: var(--red);
+}
+
+@media (max-width: 768px) {
+  .variant-h1 {
+    font-size: 3rem;
+  }
+
+  .variant-h2 {
+    font-size: 1.875rem;
+  }
+
+  .variant-h3 {
+    font-size: 1.5rem;
+  }
+
+  .variant-h4 {
+    font-size: 1.0675rem;
+  }
+}

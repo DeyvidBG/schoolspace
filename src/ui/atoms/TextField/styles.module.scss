@@ -1,0 +1,22 @@
+.wrapper {
+  position: "relative";
+  flex: 1 1 40%;
+  margin: 0 2.5%;
+}
+
+.input {
+  color: #333;
+  font-size: 1.2rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.7s;
+  margin: 1rem 0;
+}
+
+.input:disabled {
+  background-color: var(--grey);
+}

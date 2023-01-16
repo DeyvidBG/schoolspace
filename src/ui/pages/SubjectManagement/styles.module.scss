@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 10%;
+  width: 90%;
+  background-color: var(--white);
+  border-radius: 1rem;
+  margin: 1rem auto;
+  padding: 1rem 1.33rem;
+}
+
+.header > form {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.subjectsContainer {
+  width: 100%;
+  margin: 1rem auto;
+}

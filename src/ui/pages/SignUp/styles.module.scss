@@ -1,0 +1,17 @@
+.signUp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border-radius: 1rem;
+  width: 70%;
+  min-height: 70%;
+  padding: 1rem 1.33rem;
+  background-color: var(--grey);
+}
+
+@media (max-width: 768px) {
+  .signUp {
+    width: 90%;
+  }
+}

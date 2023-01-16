@@ -1,0 +1,21 @@
+.avatar {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.avatar.sm {
+  width: 25%;
+}
+
+.avatar.md {
+  width: 50%;
+}
+
+.avatar.lg {
+  width: 75%;
+}
+
+.avatar.xl {
+  width: 100%;
+}
+/*# sourceMappingURL=styles.module.css.map */

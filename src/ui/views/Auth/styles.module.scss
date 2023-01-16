@@ -1,0 +1,19 @@
+.main {
+  display: flex;
+  flex: 1 0 auto;
+  flex-flow: row nowrap;
+  background-color: var(--grey);
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(
+    circle at right,
+    var(--lightBlue) 0%,
+    var(--blue) 25%,
+    var(--blue) 50%,
+    var(--darkBlue) 75%
+  );
+  background-image: url("../../assets/polyBackground.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

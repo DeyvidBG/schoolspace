@@ -1,0 +1,50 @@
+.overlay {
+  width: 80%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  width: 90%;
+  height: 80%;
+  background-color: var(--grey);
+  z-index: 11;
+  border-radius: 1rem;
+}
+
+.modal > form {
+  display: flex;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.closeButton {
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  top: 2%;
+  border-radius: 50%;
+  background-color: var(--grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    width: 100%;
+  }
+}

@@ -1,0 +1,16 @@
+.avatar {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  &.sm {
+    width: 25%;
+  }
+  &.md {
+    width: 50%;
+  }
+  &.lg {
+    width: 75%;
+  }
+  &.xl {
+    width: 100%;
+  }
+}
