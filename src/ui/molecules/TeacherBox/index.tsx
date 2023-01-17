@@ -7,11 +7,20 @@ import styles from "./styles.module.css"
 interface ITeacherBoxProps {
   teacher: any
   onAssign: (id: IdType) => Promise<void>
+  onDismissal: (id: IdType) => Promise<void>
 }
 
-const TeacherBox: FC<ITeacherBoxProps> = ({ teacher, onAssign }) => {
+const TeacherBox: FC<ITeacherBoxProps> = ({
+  teacher,
+  onAssign,
+  onDismissal,
+}) => {
   const handleAssignment = () => {
     onAssign(teacher.id)
+  }
+
+  const handleDismissal = () => {
+    onDismissal(teacher.id)
   }
 
   return (
@@ -26,7 +35,7 @@ const TeacherBox: FC<ITeacherBoxProps> = ({ teacher, onAssign }) => {
             type="button"
             variant="contained"
             color="error"
-            onClick={handleAssignment}
+            onClick={handleDismissal}
           >
             Remove from school
           </Button>
