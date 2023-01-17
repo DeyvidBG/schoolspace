@@ -49,11 +49,16 @@ const SignIn: FC<ISignInProps> = () => {
           hideMessage()
           navigate("/lobby")
         }, 1000)
+      } else if (userData.role === Role.Teacher) {
+        setTimeout(() => {
+          hideMessage()
+          navigate("/teacher/classes")
+        }, 1000)
       } else if (userData.role === Role.Principal) {
         setTimeout(() => {
           hideMessage()
           navigate("/school/subjects")
-        })
+        }, 1000)
       } else if (userData.role === Role.Admin) {
         setTimeout(() => {
           hideMessage()

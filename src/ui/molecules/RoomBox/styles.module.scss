@@ -1,0 +1,11 @@
+.roomBox {
+  margin: 1rem auto;
+  padding: 1rem 1.33rem;
+  background-color: var(--white);
+  width: 90%;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}

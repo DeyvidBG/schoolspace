@@ -8,6 +8,7 @@ import {
   Main,
   StudentView,
   SchoolView,
+  TeacherView,
 } from "./ui/views"
 import {
   SignIn,
@@ -19,6 +20,7 @@ import {
   Schools,
   SubjectManagement,
   TeacherManagement,
+  RoomManagement,
 } from "./ui/pages"
 
 const router = createBrowserRouter([
@@ -36,6 +38,20 @@ const router = createBrowserRouter([
     path: "/student",
     element: <StudentView />,
     children: [{ path: "schedule", element: <Timetable /> }],
+  },
+  {
+    path: "/teacher",
+    element: (
+      <RequireAuth role={Role.Teacher}>
+        <TeacherView />
+      </RequireAuth>
+    ),
+    children: [
+      {
+        path: "classes",
+        element: <h1>Classes</h1>,
+      },
+    ],
   },
   {
     path: "/admin",
@@ -94,14 +110,6 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/protected/me",
-    element: (
-      <RequireAuth role={Role.User}>
-        <h1>Hello future me!</h1>
-      </RequireAuth>
-    ),
-  },
-  {
     path: "/school",
     element: (
       <RequireAuth role={Role.Principal}>
@@ -123,6 +131,19 @@ const router = createBrowserRouter([
         element: <SubjectManagement />,
       },
       { path: "teachers", element: <TeacherManagement /> },
+      {
+        path: "rooms",
+        loader: async () => {
+          const requests = await fetch("http://localhost:8000/schools/rooms", {
+            method: "GET",
+            headers: {
+              authorization: `Bearer ${sessionStorage.getItem("jwt")}`,
+            },
+          })
+          return await requests.json()
+        },
+        element: <RoomManagement />,
+      },
     ],
   },
   {

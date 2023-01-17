@@ -5,6 +5,7 @@ import {
 } from "./userSchema"
 import { schoolSignUpSchema } from "./schoolSchema"
 import { subjectSchema } from "./subjectSchema"
+import { addRoomSchema } from "./roomSchema"
 
 export {
   userSignInSchema,
@@ -12,4 +13,5 @@ export {
   userEmailSchema,
   schoolSignUpSchema,
   subjectSchema,
+  addRoomSchema,
 }

@@ -1,55 +1,67 @@
 import React, { FC, useEffect, useState } from "react"
 import { Outlet, useNavigate } from "react-router-dom"
-import { Drawer, FlexBox, Typography } from "../../atoms"
+import Typography from "../../atoms/Typography/index"
+import ClassIcon from "@mui/icons-material/Class"
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth"
+import FeedbackIcon from "@mui/icons-material/Feedback"
+import GradeIcon from "@mui/icons-material/Grade"
 import SchoolIcon from "@mui/icons-material/School"
 import CloseIcon from "@mui/icons-material/Close"
-import PeopleIcon from "@mui/icons-material/People"
-import PercentIcon from "@mui/icons-material/Percent"
-import MeetingRoomIcon from "@mui/icons-material/MeetingRoom"
 import LogoutIcon from "@mui/icons-material/Logout"
+import FlexBox from "../../atoms/FlexBox/index"
+import Drawer from "../../atoms/Drawer"
 import MenuButton from "../../molecules/MenuButton"
 import { ColorOptions } from "../../atoms/utils/shared-types"
 import { useMediaQuery } from "@mui/material"
 import { useAuth } from "../../../provider/AuthProvider"
 import { Role } from "../../../model/shared-types"
 
-interface ISchoolViewProps {}
+interface ITeacherViewProps {}
 
-const SchoolView: FC<ISchoolViewProps> = () => {
-  const { user, signOut } = useAuth()
-  const navigate = useNavigate()
+const links = [
+  {
+    icon: <ClassIcon />,
+    text: "Classes",
+    color: "secondary" as ColorOptions,
+    disabled: false,
+    onClick: () => {
+      console.log("Hello")
+    },
+  },
+  {
+    icon: <CalendarMonthIcon />,
+    text: "Schedule",
+    color: "secondary" as ColorOptions,
+    disabled: false,
+    onClick: () => {
+      console.log("Hello")
+    },
+  },
+  {
+    icon: <GradeIcon />,
+    text: "Grades",
+    color: "primary" as ColorOptions,
+    disabled: false,
+    onClick: () => {
+      console.log("Hello")
+    },
+  },
+  {
+    icon: <FeedbackIcon />,
+    text: "Feedback",
+    color: "error" as ColorOptions,
+    disabled: false,
+    onClick: () => {
+      console.log("Hello")
+    },
+  },
+]
+
+const TeacherView: FC<ITeacherViewProps> = () => {
   const [isVisible, setIsVisible] = useState(true)
   const matches = useMediaQuery("(max-width: 768px)")
-
-  const links = [
-    {
-      icon: <PercentIcon />,
-      text: "Subjects",
-      color: "secondary" as ColorOptions,
-      disabled: false,
-      onClick: () => {
-        navigate("/school/subjects")
-      },
-    },
-    {
-      icon: <PeopleIcon />,
-      text: "Teachers",
-      color: "secondary" as ColorOptions,
-      disabled: false,
-      onClick: () => {
-        navigate("/school/teachers")
-      },
-    },
-    {
-      icon: <MeetingRoomIcon />,
-      text: "Rooms",
-      color: "secondary" as ColorOptions,
-      disabled: false,
-      onClick: () => {
-        navigate("/school/rooms")
-      },
-    },
-  ]
+  const navigate = useNavigate()
+  const { user, signOut } = useAuth()
 
   useEffect(() => {
     if (!matches) {
@@ -129,7 +141,6 @@ const SchoolView: FC<ISchoolViewProps> = () => {
           width: matches ? "100%" : "calc(100% - 20%)",
           height: "100vh",
           backgroundColor: "var(--grey)",
-          overflow: "auto",
         }}
       >
         <Outlet />
@@ -138,4 +149,4 @@ const SchoolView: FC<ISchoolViewProps> = () => {
   )
 }
 
-export default SchoolView
+export default TeacherView
